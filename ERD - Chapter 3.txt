@@ -1,0 +1,26 @@
+ERD's - Entity Relationship Diagram 
+You should be able to explain the purpose of an ERD.
+--- A visual way to understand how all of the separate elements in a database are related to each other and how they work together. 
+
+You should be able to identify resources, fields, primary keys, and foreign keys on an ERD.
+- Entities - object - person, place, or thing to be tracked in database - entities are rows, attributes are columns 
+--- Resources: Entities (e.g. 'Walkers')
+--- Fields: Properties (e.g. 'id int pk', 'name varchar', 'email varchar')
+--- Primary keys: An attribute (or field) that uniquely identifies every record in a certain table. 1 per entity. This has to be unique so that it identifies only ONE record in a table. Cannot change/never null (value cannot be left blank). Example: customer ID that increments and never repeats (#'s). 
+--- Foreign keys: Same as a primary key, but located in a foreign place. e.g. customer ID is the PK for the customer entity, but is referenced in the order entity as an FK. FK's don't have to be unique and can be repeated in the table.  There can be multiple foreign keys in one entity - e.g. customerID, productID.
+--- Composite primary key - two or more attributes are needed to uniquely identify a record in a table. (e.g. combining productID & order number). 
+
+You should be able to define resources, their fields, and their relationships in dbdiagram.
+--- Table Walkers {
+id int pk 
+name varchar
+email varchar
+city varchar
+}
+
+- The above visually translates to tables.
+
+--- Defining relationships: Create a relationship by clicking on PK and clicking and dragging to the FK on another resource (entity).
+
+You should be able to explain what a 1 -> many relationship is. 
+--- A one to many relationship example would be ONE customer to MANY orders. 
